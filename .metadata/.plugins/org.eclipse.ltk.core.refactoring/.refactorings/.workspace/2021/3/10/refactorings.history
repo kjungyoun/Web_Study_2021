@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;homework&apos; to &apos;homework_front&apos;" description="Rename resource &apos;homework&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/homework" name="homework_front" stamp="1614690461242" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;htmlNcss&apos; to &apos;web_front&apos;" description="Rename resource &apos;htmlNcss&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/htmlNcss" name="web_front" stamp="1614690559083" updateReferences="true"/>
+</session>

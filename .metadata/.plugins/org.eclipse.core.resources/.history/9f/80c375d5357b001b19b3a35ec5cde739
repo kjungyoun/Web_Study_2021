@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Become a Member</title>
+</head>
+<body>
+<header>
+	<h1 align="center">
+		Become a Member
+	</h1>
+</header>
+<form action="index.html">
+	<fieldset>
+		<legend>Registration Information</legend>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<label for="userid">E-mail : </label>					
+					</td>
+				</tr>
+				<tr>
+					<label for="password">Password : </label>
+				</tr>
+				<tr>
+					<label for="vpassword">Verify Password : </label>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>
+</body>
+</html>
