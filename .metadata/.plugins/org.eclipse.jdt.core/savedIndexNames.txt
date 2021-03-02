@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/Users/youn/SSAFY/work_web/.metadata/.plugins/org.eclipse.jdt.core
-2285716205.index
-1064126115.index

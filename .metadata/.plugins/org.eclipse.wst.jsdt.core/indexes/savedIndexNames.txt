@@ -1,4 +1,0 @@
-INDEX VERSION 1.4+/Users/youn/SSAFY/work_web/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-2285716205.index
-1064126115.index
-545616749.index

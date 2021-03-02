@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move &apos;0201, 0202, 0203, 0204, 0205, 0208, 0209, 0210, 0215, 0216, 0217, 0218, 0222, 0223, 0225&apos; to &apos;2월&apos;" description="Move 15 resources to &apos;2월&apos;" destination="2월" element1="0201" element10="0216" element11="0217" element12="0218" element13="0222" element14="0223" element15="0225" element2="0202" element3="0203" element4="0204" element5="0205" element6="0208" element7="0209" element8="0210" element9="0215" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="15" stamp="1614674070626" updateReferences="true"/>
-</session>
