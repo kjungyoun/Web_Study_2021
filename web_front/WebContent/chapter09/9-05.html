@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Transition Basic</title>
+    <style>
+    	#graph{
+    		width: 610px;
+    		border: 3px solid black;
+    	}
+        .bar {
+            width: 100px; height: 100px;
+            background-color: orange;
+			margin:5px;
+            -ms-transition-duration: 5s;
+            -moz-transition-duration: 5s;
+            -o-transition-duration: 5s;
+            -webkit-transition-duration: 5s;
+            transition-duration: 5s;
+        }
+		#graph:hover >.bar {
+			width: 600px;
+		}
+        
+        .bar:nth-child(1){
+        	transition-timing-function: linear;
+        }
+        .bar:nth-child(2){
+        	transition-timing-function: ease;
+        }
+        .bar:nth-child(3){
+        	transition-timing-function: ease-in;
+        }
+        .bar:nth-child(4){
+        	transition-timing-function: ease-in-out;
+        }
+        .bar:nth-child(4){
+        	transition-timing-function: ease-out;
+        }
+    </style>
+</head>
+<body>
+	
+    <div id="graph">
+    
+	    <div class="bar"></div>
+	    <div class="bar"></div>
+	    <div class="bar"></div>
+	    <div class="bar"></div>
+	    <div class="bar"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	cusor: pointer;
+}
+
+/* 상단 header 설정 */
+.header{
+	position: relative;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+	
+}
+.header #logo{
+	font-size: 30px;
+	color: #bb9bff;
+	font-weight: bold;
+}
+.header .nav{
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+	height: 70px;
+}
+.header .menu{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.header li{
+	float: right;
+	margin-right: 10px;
+	font-size: 20px;
+}
+.header .menu-item{
+	color: darkgray;
+}
+.header .menu-item:hover{
+	color: mediumpurple;
+}
+
+/* 중앙 content */
+.content{
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+}
+.content-left{
+	width: 25%;
+	float: left;
+}
+.content-left-profile{
+	height: 150px;
+	border: 1px solid lightblue;
+	margin: 10px 0px;
+}
+.content-left-poll{
+	min-height: 312px;
+	border: 1px solid lightblue;
+	font-size: 15px;
+	color: lightslategray;
+}
+.vote-title{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+.vote-question{
+	color: royalblue;
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.vote-answer{
+	margin-top: 10px;
+}
+.vote-answer li{
+	padding-left: 10px;
+	margin-top: 5px;
+}
+.vote-answer li:last-child{
+	margin-bottom: 10px;
+}
+.vote-button{
+	text-align: right;
+	margin: 10px;
+}
+.button{
+	background: white;
+	color: black;
+	border: 1px solid rgba(0,0,0,0.3);
+}
+.btn-primary{
+	border-color: rgba(128,0,128,0.3);
+	background: rgb(128,0,128);
+	color: white;
+}
+.vote-date{
+	margin: 20px 0 10px;
+	font-weight: bold;
+	color: #70706e;
+	
+}
+/* content section */
+.content-section{
+	width: 75%;
+	float: right;
+}
+.content-section-article{
+	margin: 10px;
+	border: 1px solid darkgray;
+	height: 150px;
+}
+
+/* 맨 하단 footer */
+.footer{
+	clear: left;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+	height: 70px;
+}
+.footer ul{
+	float: right;
+}
+.footer li{
+	display: inline-block;
+	margin-right: 10px;
+	font-size: 11px;
+	color: darkgray;
+}
+
