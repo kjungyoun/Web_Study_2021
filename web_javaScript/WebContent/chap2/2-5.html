@@ -5,13 +5,25 @@
 	<title>시계</title>
 	<script type="text/javascript">
 	window.onload = function() {
-		setInterval(showTime, 1000);
+		
+		// setInterval 지정된 시간(ms) 마다 함수를 호출
+		var ct = setInterval(showTime, 1000);
+		
+		// setTimeout : 지정된 시간 (ms) 후에 함수 한번 호출
+		setTimeout(clearTime, 3000);
+		
 	};
+	
+	function clearTime(){
+		// setInterval 을 멈추는 함수
+		clearInterval(ct);
+	}
 	
 	function showTime() {
 		var view = document.getElementById("view");
 		var date = new Date();
 		view.innerHTML = date.toLocaleTimeString();
+		document.
 	}
 	</script>
 </head>

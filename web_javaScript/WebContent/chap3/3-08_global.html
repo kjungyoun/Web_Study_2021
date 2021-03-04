@@ -4,14 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<script type="text/javascript">
+	var val = 10; 			// global 변수
 	window.onload = function() {
-		// var val = 10;
-		{	
-			// 변수 hoisting
-			alert(val);
-			var val = 10;
+		{
+			var test = 10; // local 변수
+			ssafy = "hello"; // global 변수
 			//let val = 20;
-			alert(val);
 			const con = 10;
 			//con = 20;
 		}

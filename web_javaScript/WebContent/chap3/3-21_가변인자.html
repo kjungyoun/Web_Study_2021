@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function printResult(x,y){
+		console.log('x:',x);
+		console.log('y:',y);
+		
+		// arguments는 함수의 인자를 관리하는 배열
+		for (var i = 0; i < arguments.length; i++) {
+			console.log(arguments[i]);
+		}
+		console.log('============');
+	}
+	
+	printResult(10);
+	printResult(10,20);
+	printResult(10,20,30);
+</script>
+</head>
+<body>
+
+</body>
+</html>

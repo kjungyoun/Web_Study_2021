@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	function test(){
+		console.log('test1 call');
+	}
+	
+	var test2 = function(){
+		console.log('test2 call');
+	}
+	
+	test();
+	test2();
+	
+	console.log(window);
+	
+	// 함수 인자로 함수를 전달 받을 수 있다.
+	function callFun(a){
+		a();
+	}
+	callFun(test);
+	callFun(test2);
+	callFun(function(){
+		console.log('익명함수');
+	});
+	
+	// 함수를 리턴할 수 있다.
+	function returnFun(){
+		return function(){
+			console.log('함수를 리턴함...');
+		}
+	}
+	
+	var rf = returnFun();
+	rf();
+	returnFun()();
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
