@@ -20,7 +20,9 @@
   font-size: 20px;
   text-align: center;
 }
-
+.poll-date{
+  margin: 10px;
+}
 .poll-question {
   margin-bottom: 10px;
 }

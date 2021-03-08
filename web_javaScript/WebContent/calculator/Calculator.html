@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#calc { 
+		border: 1px solid  gray;
+		width: 350px;
+		text-align: center;	
+	}
+	#formula{
+		text-align: right;
+		width: 80%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}  
+	#resultDiv{
+		text-align: left;
+		margin-left: 40px;
+	}
+	button{
+		width:70px;
+		height:70px;
+	}
+</style>
+<script type="text/javascript">
+	var cnt = 1;
+	
+	function calc(data){
+		let  formula = document.getElementById('formula')
+		let result = document.getElementById('result');
+		if(data == '='){
+			try {
+				let r = formula.value
+				formula.value = eval(r);
+				result.innerHTML += cnt++ +'. '+r+' = '+formula.value+'<br/>';
+			} catch (e) {
+				alert('연산 오류:' +e);
+			}
+		}else if(data == 'CE'){
+			formula.value = 0.0;
+		}else{
+			if(formula.value == '0.0'){
+				formula.value = data;
+			}else{
+				formula.value += data;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	 <div id='calc'>
+	 	<input 	type='text' id='formula' value='' 
+	 			placeholder='0.0' readonly="readonly"/>
+	 	<div id='pad'>
+	 		<button onclick="calc('7')">7</button>
+	 		<button onclick="calc('8')">8</button>
+	 		<button onclick="calc('9')">9</button>
+	 		<button onclick="calc('+')">+</button>
+	 		<button onclick="calc('4')">4</button>
+	 		<button onclick="calc('5')">5</button>
+	 		<button onclick="calc('6')">6</button>
+	 		<button onclick="calc('-')">-</button>
+	 		<button onclick="calc('1')">1</button>
+	 		<button onclick="calc('2')">2</button>
+	 		<button onclick="calc('3')">3</button>
+	 		<button onclick="calc('*')">*</button>
+	 		<button onclick="calc('0')">0</button>
+	 		<button onclick="calc('CE')">CE</button>
+	 		<button onclick="calc('=')">=</button>
+	 		<button onclick="calc('/')">/</button>
+	 	</div>	
+	 	<div id='resultDiv'>
+	 		<h2>결과 이력</h2>
+	 		<p id='result'></p>
+	 	</div>	
+	 </div>
+</body>
+</html>
+
+
+
+
+
+
