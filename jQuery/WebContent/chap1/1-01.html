@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>jquery 기본.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      /* $(document).ready(function () {
+        $('button').click(function () {
+          $('#p1').css('background', 'orange');
+        });
+      }); */
+      
+      // 1. $(function(){}) : 초기화 함수
+      // 위와 똑같은 코드인 것이다.
+      $(function () {
+    	  // 2. $(selector) : selector에 해당하는 Tag를 찾아 jQuery 객체로 생성
+          $('button').click(function () {
+        	  // 이벤트 처리함수에서 this 는 이벤트가 발생한 객체이다.
+        	  console.log(this);
+
+        	  // 3. html 태그를 생성하기, 생성된 태그를 아이디가 p1인 태그에 추가하기
+        	  $('<div><input type="text"><button  class="remove">제거</button></div>').appendTo('#p1');
+            $('#p1').css('background', 'orange');
+            
+         	// 4. DOM 객체를 jQuery객체로 변경
+      	  	$(this).html('click');
+         	$('#p1').on('click','.remove', function() {
+         		$(this).parent().remove();
+         	})
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <h2>jQuery 맛보기</h2>
+    <p>안녕하세요 싸피여러분!!!</p>
+    <p id="p1">안효인교수입니다. 참여 많이 해주세요 ^^</p>
+    <button>클릭</button>
+  </body>
+</html>

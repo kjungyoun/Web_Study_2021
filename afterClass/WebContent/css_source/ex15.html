@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS3 Linear Gradient</title>
+<style>
+.gradtext {
+    background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, purple);
+    background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, purple);
+    background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, purple);
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 72px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+<p class="gradtext">Hello World</p>
+</body>
+</html>
