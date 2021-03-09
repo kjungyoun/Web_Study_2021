@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript' src='../js/jquery-3.3.1.js'></script>
+<script type="text/javascript">
+$(function(){
+	$('#calc').click(function() {
+		$.ajax({
+			url: 'jsp/plus_ajax_xml.jsp',
+			data: {op1: $('#op1').val(), op2: $('#op2').val()},
+			dataType: 'xml',
+			success : function(xmlData){
+				// contents 에서 selector 찾기
+				$('#result').val($('result',xmlData).text())
+			},
+			err: function(xhr,status,err){
+				alert(err)
+			}
+		})
+	})
+});
+</script>
+</head>
+<body>
+<input type="text" id="op1"/> + <input type="text" id="op2"/>
+<button id="calc">=</button><input type="text" readonly="readonly" id="result"/>
+<hr/>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript' src='../js/jquery-3.3.1.js'></script>
+<script type="text/javascript">
+$(function(){
+	$('#calc').click(function() {
+		$.ajax({
+			url: 'jsp/plus_ajax2.jsp',
+			dataType: 'json',
+			success: processResult, // 대표적인 콜백함수 동작 -> 함수에 매개변수를 넣으면 json data가 해당 함수로 전달되지 않음
+			err : function(xhr,status,err){
+				alert(err);
+			}
+		})
+	})
+});
+
+function processResult(data){
+	var html = `
+	<table>
+	<tr><td>게시글 번호</td><td>${data.no}</td></tr>
+	<tr><td>제목</td><td>${data.title}</td></tr>
+	<tr><td>작성자</td><td>${data.id}</td></tr>
+	<tr><td colspan='2'>내용</td></tr>
+	<tr><td colspan='2'>${data.content}</td></tr>
+	`
+	$('#content').html(html)
+}
+
+</script>
+</head>
+<body>
+<button id="calc">게시글 보기</button>
+<div id="content"></div>
+<hr/>
+</body>
+
+
+
+
+
+</html>

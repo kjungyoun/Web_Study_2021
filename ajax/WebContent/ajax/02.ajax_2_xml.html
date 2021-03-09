@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript' src='../js/jquery-3.3.1.js'></script>
+<script type="text/javascript">
+$(function(){
+	$('#calc').click(function() {
+		$.ajax({
+			url: 'jsp/plus_ajax2_xml.jsp',
+			dataType: 'xml',
+			success: generateTable,
+			err: function(xhr, status, err){
+				alert(err)
+			}
+		})
+	})
+});
+
+function generateTable (data){
+	var html = `
+	<table border='1'>
+	<tr><td>게시글 번호</td><td>${$('no',data).text()}</td></tr>
+	<tr><td>제목</td><td>${$('title',data).text()}</td></tr>
+	<tr><td>작성자</td><td>${$('id',data).text()}</td></tr>
+	<tr><td colspan='2'>내용</td></tr>
+	<tr><td colspan='2'>${$('content',data).text()}</td></tr>
+	</table>
+	`
+	$('#content').html(html)
+}
+
+</script>
+</head>
+<body>
+<button id="calc">게시글 보기</button>
+<div id="content"></div>
+<hr/>
+</body>
+
+
+
+
+
+</html>

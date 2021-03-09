@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript' src='../js/jquery-3.3.1.js'></script>
+<script type="text/javascript">
+$(function(){
+	$('#calc').click(function() {
+		$.ajax({
+			url: 'jsp/result.jsp',
+			dataType: 'json',
+			success: processResult,
+			err: function(xhr,status,err){
+				alert(err);
+			}
+		})
+	})
+});
+
+function processResult(data){
+	var content = $('#content')
+	
+	var html = `<table border="1">
+		<tr><th width="100">이름</th><th width="100">주소</th></tr>
+	`
+	$.each(data.friendList, function(idx, item) {
+		html += `<tr><td>${item.name}</td><td>${item.addr}</td></tr>`
+	})
+	content.html(html)
+}
+
+</script>
+</head>
+<body>
+<button id="calc">게시글 보기</button>
+<div id="content">
+
+</div>
+<hr/>
+</body>
+
+
+
+
+
+</html>
