@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 모델</title>
+<script>
+function appendNode(){
+	var target=document.getElementById("target");
+	var li=document.createElement("li");
+	var text=document.createTextNode("JavaScript");
+	li.appendChild(text);
+	target.appendChild(li);
+}
+function insertNode(){
+	var target=document.getElementById("target");
+	var li=document.createElement("li");
+	var text=document.createTextNode("jQuery");
+	li.appendChild(text);
+	target.insertBefore(li, target.firstChild);
+}
+function removeNode(){
+	var target=document.getElementById("target");
+	target.parentNode.removeChild(target); 
+}
+</script>
+</head>
+<body>
+<ul id="target">
+    <li>HTML</li>
+    <li>CSS</li>
+</ul>
+
+<input type="button" onclick="appendNode()" value="노드추가">
+<input type="button" onclick="insertNode()" value="노드삽입">
+<input type="button" onclick="removeNode()" value="노드삭제">
+</body>
+</html>

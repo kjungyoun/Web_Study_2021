@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.backColor1{
+	background-color: green;
+	color:black;
+}
+.backColor2{
+	background-color: yellow;
+	color:black;
+}
+</style> 
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+	$('#btn1').click(function () {
+		$('#str').removeClass('backColor2');
+		$('#str').addClass('backColor1');
+	});
+	$('#btn2').click(function () {
+		$('#str').removeClass('backColor1');
+		$('#str').addClass('backColor2');
+	});
+});
+</script>
+</head>
+<body>
+<button id="btn1">초록</button>
+<button id="btn2">노랑</button><p>
+<span id="str">안녕하세요</span>
+</body>
+</html>

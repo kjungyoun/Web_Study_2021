@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<style>
+.container{
+	position: absolute;
+	top:10px;
+	left: 10px;
+	height: 80px;
+	width: 250px;
+	border: 1px  dotted  black;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+.login{
+	position: absolute;
+	top:24px;
+	left: 180px;
+	height: 40px;
+	width: 80px;
+	background-color:#47C83E;
+	border: 1px  solid  #47C83E;
+	font-size: 10px;
+	color:white;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+input{
+	border: 0.5px  solid  #D5D5D5;
+}
+</style>
+<script>
+$(document).ready(function () {
+    $("input").focus(function () {
+        $(this).css("background-color", "#EAEAEA");
+    });
+    $("input").blur(function () {
+        $(this).css("background-color", "#fff");
+    });
+    
+    $('#login').click(function(){
+    	var id=$('#id').val();   
+    	var pw=$('#pw').val();
+    	alert("아이디:" + id +"\n비밀번호:" + pw);
+    });
+});
+</script>
+</head>
+<body>
+<div id="result"  class="container">
+    <input type="text" id="id" placeholder="아이디"><br>
+    <input type="text" id="pw" placeholder="비밀번호 ">
+    <button id="login">로그인</button>
+ </div>
+</body>
+</html>

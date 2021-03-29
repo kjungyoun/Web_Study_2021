@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax테스트</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	function contentChange() {
+		let msg = '<font color=red size=20>안녕, 사피~!!</font>'
+		$('div').html(msg);
+	}
+	function contentChange2() {
+		$.ajax({
+			url : 'data.txt',
+			success : function(result) {
+				$('div').html(result)
+			}
+		})
+	}
+</script>
+</head>
+<body>
+	<h3>Ajax 테스트</h3>
+	<hr>
+	<button onclick="contentChange()">눌러</button>
+	<button onclick="contentChange2()">눌러2</button>
+	<div>SSAFY</div>"/Users/youn/SSAFY 문서/보충수업자료/Ajax.txt"
+</body>
+</html>

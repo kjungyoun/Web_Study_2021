@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<style>
+.gallery_container{
+	position: absolute;
+	top:10px;
+	left: 150px;
+	height: 300px;
+	width: 600px;
+	/* border:1px dotted red; */
+	padding-left: 10px;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$('#img1').click(function(){
+	    $('.gallery_container').html(
+				"<img src='image/pic1.jpg' style='width:400px; height:250px'/>"); 
+	});
+	$('#img2').click(function(){
+	    $('.gallery_container').html(
+				"<img src='image/pic2.jpg' style='width:400px; height:250px'/>"); 
+	});
+	$('#img3').click(function(){
+	    $('.gallery_container').html(
+				"<img src='image/pic3.jpg' style='width:400px; height:250px'/>"); 
+	});
+});
+</script>
+</head>
+<body>
+<img src="image/pic1.jpg" id="img1" width="50px" height="50px"/><br>
+<img src="image/pic2.jpg" id="img2" width="50px" height="50px"/><br>
+<img src="image/pic3.jpg" id="img3" width="50px" height="50px"/>
+
+<div class="gallery_container"></div>
+</body>
+</html>

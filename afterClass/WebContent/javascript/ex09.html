@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>브라우저 객체 모델</title>
+<script>
+var n=0;
+function changeEx()
+{
+	f=document.getElementById("fm");
+	n++;
+	switch(n)
+	{
+		case 1:f.style.color="red";         break;
+		case 2:f.style.color="green";       break;
+		case 3:f.style.color="blue";  n=0;  break;
+	}
+	window.setTimeout("changeEx()", 500) //호출함수, 호출주기
+}
+</script>
+</head>
+<body onload="changeEx()">
+	<font id="fm">안녕하세요</font>
+</body>
+</html>

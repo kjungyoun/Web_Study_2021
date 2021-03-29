@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<style>
+span{ margin:9px; font-size:16px; color:black; }
+.bold{ background-color:orange; color:green; }
+</style>
+<script>
+$(document).ready(function(){
+	$('span').hover(function(){
+		$(this).addClass("bold");
+	},function(){
+		$(this).removeClass("bold");
+	});
+});
+</script>
+</head>
+<body>
+<span>고양이</span>
+<span>강아지</span>
+<span>고라니</span>
+<span>원숭이</span>	
+</body>
+</html>

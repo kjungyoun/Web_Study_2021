@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+	$('#btn').click(function(){
+		$.getJSON("json2.txt",function(data){
+			$("#display").empty();
+			
+			var table="<table border='1'><tr><td>순번</td><td>아이디</td><td>비밀번호</td>";
+			
+			//each()메서드를 이용해서 데이타만큼 반복처리
+			// entry.id  또는 entry["id"]으로 표현
+			$.each(data, function(index, entry){
+					table += "<tr>";
+					table += "<td>" + index + "</td>";
+					table += "<td>" + entry.id + "</td>";
+					table += "<td>" + entry.pw + "</td></tr>";
+			});	
+			table +="</table>";
+			$('#display').append(table);
+		});
+	});
+});
+</script>
+</head>
+<body>
+<button id="btn">데이타불러오기</button><br><br>
+
+<div id="display"></div>
+</body>
+</html>

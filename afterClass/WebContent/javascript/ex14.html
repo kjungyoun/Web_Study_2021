@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인라인 이벤트 모델</title>
+<script>
+function process()
+{
+//	var x=document.getElementById('x');  //요소객체(주소)를 리턴
+//	var nX=x.value;                      //값을 문자열로 리턴
+//	var numX=parseInt(nX);               //문자열을 숫자로 리턴
+	
+	var x=parseInt(document.getElementById('x').value);
+	var y=parseInt(document.getElementById('y').value);
+	var op=document.getElementById('ope').value;
+	var solValue;
+	
+	switch(op)
+	{
+		case "+":solValue=x+y;	break;
+		case "-":solValue=x-y;	break;
+		case "*":solValue=x*y;	break;
+		case "/":solValue=x/y;	break;
+		default:alert("연산자 오류");
+	}
+	document.getElementById('sol').innerText="결과 :" + solValue;
+}
+</script>
+</head>
+
+<body>
+<input type="text" name="x" id="x" />
+	 <select id="ope">
+		  <option >선택하세요</option>
+		  <option value="+">+</option>
+		  <option value="-">-</option>
+		  <option value="*">*</option>
+		  <option value="/">/</option>
+	 </select>
+<input type="text" name="y" id="y" />	
+<input type="button" value="계산하기" onclick="process()"><br><br>
+<span id="sol"></span>	
+</body>
+</html>

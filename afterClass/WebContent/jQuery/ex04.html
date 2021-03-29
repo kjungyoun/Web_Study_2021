@@ -1,0 +1,58 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function process1(){
+	var ob=document.getElementById("txt").value;
+	document.getElementById("view1").innerText=ob;
+}
+function process2(){
+	var ob=document.getElementById("txt").value;
+	document.getElementById("view2").innerHTML=ob;
+}
+</script>
+</head>
+<body>
+<input type="text" id="txt" size="50" name="text">
+<input type="button" value="출력1" onclick="process1()">
+<input type="button" value="출력2" onclick="process2()">
+<br><br><br>
+<div id="view1"></div>
+<div id="view2"></div>	
+</body>
+</html>
+-->
+
+
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		var ob=$("#txt").val();
+		$("#view1").text(ob);
+	});
+	$("#btn2").click(function(){
+		var ob=$("#txt").val();
+		$("#view2").html(ob);
+	});
+});
+</script>
+</head>
+<body>
+<input type="text" id="txt" size="50" name="text">
+<input type="button" value="출력1" id="btn1">
+<input type="button" value="출력2" id="btn2">
+<br><br><br>
+<div id="view1"></div>
+<div id="view2"></div>	
+</body>
+</html> 

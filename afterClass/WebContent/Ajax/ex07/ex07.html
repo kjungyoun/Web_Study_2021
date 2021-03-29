@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script>
+$(function(){
+	$.getScript("demo1.js");            // demo1.js파일을 호출
+	
+	$("#submit").click(function(){
+		var sendData=setName($('.user').val());
+		
+		$("#message").html(sendData);
+	});
+});
+</script></head>
+
+<body>
+<form>
+<label>이름을 입력하시오</label>
+<input type="text" name="username" class="user">
+<input type="button" id="submit" value="입력">
+</form><br><br>
+
+<div id="message"></div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인라인 이벤트 모델</title>
+<script>
+function plusfunc(){
+	            // "10" --> 10 변환    
+	//frm.rs.value=parseInt(frm.a.value) + parseInt(frm.b.value);
+	frm.rs.value=Number(frm.a.value) + Number(frm.b.value);
+}
+</script>
+</head>
+
+<body>
+<form name="frm">
+	A값 : <input type="text" size="7" name="a">&nbsp;&nbsp;
+	B값 : <input type="text" size="7" name="b">&nbsp;&nbsp;
+	결과 : <input type="text" size="7" name="rs">
+	<input type="button" name="plus" value="더하기" onclick="plusfunc()">
+</form>      
+</body>
+</html>

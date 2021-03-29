@@ -1,0 +1,1 @@
+'<font color=blue size=30>Hello, SSAFY~!!</font>'

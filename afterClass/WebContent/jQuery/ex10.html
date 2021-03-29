@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").keydown(function(){
+        $("input").css("background-color","yellow");
+    });
+    $("input").keyup(function(){
+        $("input").css("background-color","pink");
+    });
+});
+</script>
+</head>
+<body>
+Enter your name: <input type="text">
+</body>
+</html>

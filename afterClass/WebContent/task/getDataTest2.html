@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>데이터값 얻어오기</title>
+   <script>
+   		// 이 JavaScript를 jQuery로 바꾸기!!!		
+   
+   
+      function printData(){
+    	 //폼내의 데이터 얻기  ===> document.폼이름.설정이름.value
+    	 //document.frm.id.value= //setValue의 의미!!
+    	 //=document.frm.id.value //getValue의 의미!!
+    	 //document.frm.id.value='juwon1004'; 
+    	 
+    	 var id =document.frm.id.value;
+    	 var pwd =document.frm.pwd.value;
+    	 
+    	 
+    	 //var apple = document.frm.apple.value;
+    	 //alert(document.frm.apple.checked);//체크된 상태: true
+    	 var f = document.frm; // document.frm == f
+    	 /*
+    	 var fruit='';
+    	 if(f.apple.checked){//사과 V체크 되었다면
+    		 fruit += '사과 '; //fruit += f.apple.value;
+    	 }
+    	 if(f.straw.checked){
+    		 fruit += '딸기 ';
+    	 }
+    	 if(f.banana.checked){
+    		 fruit += '바나나';
+    	 }
+    	 */
+    	 
+    	 //f.apple  ===> 데이터 타입?   <input>엘리먼트!!
+    	 //f.fruit  ===> 데이터 타입?   <input>엘리먼트들!! ==> Array!!
+    	 //f.fruit[0]  ==   <input name=apple>		 
+    	 
+    	 var fruitNames='';
+    	 for(var i=0; i<f.fruit.length; i++){
+    		 if(f.fruit[i].checked){
+    			 fruitNames += f.fruit[i].value + ' ';  
+    		 }
+    	 }
+    	 
+    	 //f.room   ----> Array!!
+    	 var roomName;
+    	 for(var i=0; i<f.room.length; i++){
+    		 if(f.room[i].checked){
+    			 roomName= f.room[i].value;
+    			 break;//radio는 단일 선택이기 때문에
+    		 }
+    	 }
+    	 
+    	 var hide = f.hide.value;
+    	 var myfile = f.myfile.value;
+    	 var sports = f.sports.value;
+    	 var note = f.note.value;
+    	 
+    	 alert('아이디▶'+ id +'\n비번▶'+pwd
+    			 +'\n좋아하는과일▶'+ fruitNames +
+    			 '\n강의실▶'+roomName+
+    			 '\n히든▶'+hide+'\n파일▶'+myfile+
+    			 '\n운동▶'+sports+'\n비고▶'+ note); 
+      }//printData
+   </script>
+</head>
+<!-- getDataTest.html -->
+<body>
+   <h3>데이터값 얻어오기</h3>
+   <hr>
+   <!-- 0618/form_test.html문서안에 있는 form태그를 복사 -->
+   <form name="frm" >
+         아이디 : <input type="text" name="id"><br>
+         비밀번호: <input type="password" name="pwd"><br>
+         좋아하는 과일: 
+         <!--  
+                 <input type="checkbox" name='apple' value="사과">사과
+                 <input type="checkbox" name="straw">딸기
+                 <input type="checkbox" name="banana">바나나
+          -->
+                 <input type="checkbox" name='fruit' value="풋사과">사과
+                 <input type="checkbox" name="fruit" value="딸기">딸기
+                 <input type="checkbox" name="fruit" value="바나나">바나나
+                 <br>
+         당신의 강의실: <input type="radio" name="room" checked
+                        value="1강의실"> 1강의실
+                 <input type="radio" name="room" 
+                        value="2강의실"> 2강의실
+                 <input type="radio" name="room"
+                        value="3강의실"> 3강의실      
+                 <input type="radio" name="room"
+                        value="4강의실"> 4강의실
+                 <br>  
+          
+          나보여? <input type="hidden" value="지킬박사와 하이드" name="hide">     
+            <br>                   
+         파일업로드: <input type="file" name="myfile">
+      <!-- 로컬PC(사용자PC)에 있는 파일을 서버(PC)에 올릴때(전송할때) 사용 -->
+            <br> 
+         운동: <select name="sports">
+             <option value="baseball">야구</option>  
+             <option>축구</option>  
+             <option selected>농구</option>  
+             <option>배구</option>  
+          </select>
+          <br> 
+         비고: <textarea rows="5" cols="10" name="note"></textarea>
+     <br>
+     <button type="button" onclick="printData()">등록</button> 
+   </form>
+</body>
+</html>
+
+
+

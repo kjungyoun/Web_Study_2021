@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON로그인</title>
+<style>
+	span{
+		font-size: 15px;
+		font-weight: bold;
+		color:orange;
+	}
+	#log1{
+		border: 1px dotted gray;
+		padding: 20px;
+		width: 350px;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+var emp = { 
+		"id" : "abcd",
+		"pw" : "1234",
+		"name" : "홍길동",
+		"point" : "1250"
+};
+$(document).ready(function(){
+	
+	$("#loginb").click(function(){
+	     var sid = $("#id").val();
+	     var spw = $("#pw").val();
+	     
+	     if(sid=="" || spw=="")
+	     {
+			$("#result").text("아이디와 비밀번호를 입력해 주세요").css("color","black");			    	 
+	     }else{
+			//alert(emp.id+"   "+sid+"\n"+emp.pw+"    "+spw);
+			if(emp.id==sid && emp.pw==spw){
+				$("#result").html(emp.name+"님 로그인 하셨습니다<br>현재 보유하신 포인터는 "
+						          +emp.point+"점 입니다").css("color","blue");
+			}else{
+				$("#result").text("id 또는 pw가 틀립니다").css("color","red");
+			} //end if
+	     }	//end if		
+	});	
+});
+</script>
+</head>
+<body>
+<div id="log1">
+<span>계정과 패스워드를 입력해 주세요</span>
+	<form id="loginf">
+		<table>
+			<tr>
+				<td>계정</td>
+				<td width="150px"><input type="text" id="id" name="id"/></td>
+				<td>
+					<input type="button" id="loginb" name="loginb" value="로그인" />
+				</td>
+			</tr>
+			<tr>
+				<td>패스워드</td>
+				<td><input type="password" id="pw" name="pw"/></td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="3"><div id="result"></div></td>
+			</tr>
+		</table>
+	</form>
+</div>
+</body>
+</html>

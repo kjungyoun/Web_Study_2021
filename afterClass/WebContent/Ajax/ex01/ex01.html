@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+<script>
+var httpRequest=null;
+
+function getXMLHttpRequest()
+{
+	if(window.ActiveXObject){
+		try{
+			return new ActiveXObject("Msxml2.XMLHTTP");
+			//웹 브라우저가 IE5.0, IE6.0인 경우 ActiveX객체를 사용해서 통신객체 생성
+		}catch(e1){
+			return null;
+		}
+	}else if(window.XMLHttpRequest){
+		return new XMLHttpRequest();
+		//웹 브라우저가 IE7.0, 파이어폭스, 사파리, 오페라등 인경우 자바스크립트 내장 객체를 사용해서 생성
+	}else{
+		return null;
+	}		
+}
+//---------------------------------------------------------------------
+function load(url){
+	httpRequest=getXMLHttpRequest();              //서버와 통신  
+	httpRequest.onreadystatechange=viewMessage;   //처리할 함수
+	httpRequest.open("GET",url,true);
+	httpRequest.send(null);
+}
+//----------------------------------------------------------------------
+function viewMessage(){
+	if(httpRequest.readyState==4)   //전송완료
+	{
+		if(httpRequest.status==200) // OK - 요청성공
+		{
+			alert("응답:" + httpRequest.status);
+		}else{
+			alert("실패:" + httpRequest.status);
+		}
+	}
+}
+</script> 
+-->
+
+<script>
+function load(url){
+	var xhr=new XMLHttpRequest();
+	
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4 && xhr.status==200){
+			alert("응답:" + xhr.status);
+		}
+	}
+	xhr.open("GET", url, true);
+	xhr.send(null);
+}	
+</script> 
+</head>
+<body>
+<input type="button" value="sample.html" onclick="load(value)">
+</body>
+</html>

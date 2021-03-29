@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function helloToServer(){
+	var xhr=new XMLHttpRequest();
+	
+	xhr.onreadystatechange=function(){
+		if(xhr.readyState==4 && xhr.status==200){
+			document.getElementById('display').innerHTML=xhr.responseText;
+		}
+	}
+   //코드추가	
+
+
+	xhr.send(null);            
+}	
+</script> 
+</head>
+<body>
+<form name="f">
+	이름:<input type="text" name="irum">
+	<input type="button" value="입력" onclick="helloToServer()">
+</form>
+<div id="display"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function(){
+	$('#pwd2').keyup(function(){
+		var pass1=$('#pwd1').val();
+		var pass2=$('#pwd2').val();
+
+		if(pass1==pass2)
+			$('#result').html("비밀번호가 일치합니다").css('color',"green");
+		else
+			$('#result').html("비밀번호가 일치하지 않습니다").css('color','red');
+	});
+});
+</script>
+</head>
+<body>
+<h3>비밀번호를 입력하시오</h3>
+비밀번호 : <input type="text" id="pwd1"/>&nbsp;&nbsp;&nbsp;
+비밀번호확인 : <input type="text" id="pwd2"/>&nbsp;&nbsp;&nbsp;
+<span id="result"></span>
+</body>
+</html>
