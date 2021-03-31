@@ -114,7 +114,7 @@
 				<Context docBase="backend_basic" path="/backend" reloadable="true" source="org.eclipse.jst.jee.server:backend_basic"/>
 				<Context docBase="guestbookservlet" path="/guestbookservlet" reloadable="true" source="org.eclipse.jst.jee.server:guestbookservlet"/>
 				<Context docBase="guestbookjsp" path="/guestbookjsp" reloadable="true" source="org.eclipse.jst.jee.server:guestbookjsp"/>
-			<Context docBase="member" path="/member" reloadable="true" source="org.eclipse.jst.jee.server:member"/><Context docBase="backendHw0330" path="/backendHw0330" reloadable="true" source="org.eclipse.jst.jee.server:backendHw0330"/></Host>
+			<Context docBase="member" path="/member" reloadable="true" source="org.eclipse.jst.jee.server:member"/><Context docBase="backendHw0330" path="/backendHw0330" reloadable="true" source="org.eclipse.jst.jee.server:backendHw0330"/><Context docBase="hwbackend-3_cookie" path="/hwbackend-3_cookie" reloadable="true" source="org.eclipse.jst.jee.server:hwbackend-3_cookie"/><Context docBase="hwbackend4_JSTL" path="/hwbackend4_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:hwbackend4_JSTL"/></Host>
 		</Engine>
 	</Service>
 </Server>
