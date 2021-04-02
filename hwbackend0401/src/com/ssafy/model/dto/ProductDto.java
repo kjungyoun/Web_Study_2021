@@ -2,7 +2,7 @@ package com.ssafy.model.dto;
 
 import java.io.Serializable;
 
-public class Product implements Serializable{
+public class ProductDto implements Serializable{
 
 	private int productno;
 	private String name;
@@ -34,7 +34,9 @@ public class Product implements Serializable{
 		this.info = info;
 	}
 	
-	public Product(int productno, String name, int price, String info) {
+	public ProductDto() {};
+	
+	public ProductDto(int productno, String name, int price, String info) {
 		super();
 		this.productno = productno;
 		this.name = name;

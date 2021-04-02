@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.ssafy.model.dto.Product"%>
+    pageEncoding="UTF-8" import="com.ssafy.model.dto.ProductDto"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -16,7 +16,7 @@
 <div class="container" align="center">
 	<jsp:include page="/product/login.jsp"/>
 <%
-	Product product = (Product) request.getAttribute("product");
+	ProductDto product = (ProductDto) request.getAttribute("product");
 	if(product != null){
 %>
 	<div class="col-lg-6">

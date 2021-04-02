@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.ssafy.model.dto.MemberDto;
-import com.ssafy.model.dto.Product;
+import com.ssafy.model.dto.ProductDto;
 import com.ssafy.model.service.LoginService;
 import com.ssafy.model.service.LoginServiceImpl;
 
@@ -90,7 +90,7 @@ public class MainController extends HttpServlet {
 						}
 					}
 					if(no != null) { // 마지막으로 등록한 상품정보가 쿠키에 있는 경우
-						Product product = new Product(Integer.parseInt(no),name,Integer.parseInt(price),info);
+						ProductDto product = new ProductDto(Integer.parseInt(no),name,Integer.parseInt(price),info);
 						request.setAttribute("product", product);
 					}else {
 						request.setAttribute("msg", "등록한 상품이 없습니다.");
