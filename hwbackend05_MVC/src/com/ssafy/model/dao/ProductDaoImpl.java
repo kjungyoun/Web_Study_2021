@@ -73,6 +73,7 @@ public class ProductDaoImpl implements ProductDao {
 				productDto.setPrice(rs.getInt("price"));
 				productDto.setInfo(rs.getString("info"));
 			}
+			
 		} finally {
 			DBUtil.close(rs);
 			DBUtil.close(pstmt);
